@@ -12,8 +12,15 @@ struct ContentView: View {
         ZStack{
             VStack {
                 HStack{
+                    Rectangle()
+                        .foregroundColor(.white)
+                    .frame(width: 2,height: 20)
                     Image(systemName: "chevron.left")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20)
                         .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                   
                     Text("List")
                         .font(.system(size: 20))
                         .fontDesign(.rounded)
@@ -23,6 +30,9 @@ struct ContentView: View {
                     
                 }
                 HStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                    .frame(width: 2,height: 20)
                     Text("To Do")
                         .font(.system(size: 40))
                         .fontDesign(.rounded)
@@ -67,6 +77,16 @@ struct ContentView: View {
                     }
                 }
                 .listStyle(.plain)
+                HStack{
+                    Image (systemName: "plus.circle")
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    Text("New Reminder")
+                        .font(.system(size: 20))
+                        .fontDesign(.rounded)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        .bold()
+                    Spacer()
+                }
             }
             
             .padding()
